@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -142,7 +143,12 @@
       font-size: 1.25rem;
       color: #2a4365;
       user-select: text;
+text-align:center;
     }
+.h1{text-align:center;}
+
+    @media (max-width: 800px) {
+     .h1{display:none}}
 
     #toggleAsideBtn {
       background: transparent;
@@ -203,8 +209,7 @@ align-items: center;     /* vertical centering */
 
     /* Organization logo */
     .org-logo {
-      display: block;
-      margin: 0 auto 2rem auto;
+      display: block;margin:2px;
       max-width: 160px;
       width: 100%;
       user-select: none;
@@ -226,7 +231,7 @@ align-items: center;     /* vertical centering */
       flex-direction: column;
       gap: 12px;
       user-select: none;
-      margin-top: auto;
+max-height:90vh;overflow-y:auto;
     }
 
     nav.aside-nav button {
@@ -386,9 +391,6 @@ align-items: center;     /* vertical centering */
         display: inline-block;
       }
 
-    @media (max-width: 600px) {
-     header h1{display:none}}
-
       aside#sidebar {
         position: fixed;
         transform: translateX(-320px);
@@ -423,21 +425,22 @@ align-items: center;     /* vertical centering */
   <div id="app" role="main" aria-labelledby="pageTitle">
 
     <header>
-      <h1 id="pageTitle" tabindex="0" style='display: flex;
+      <h1 class="h1" id="pageTitle" tabindex="0" style='display: flex;
 justify-content: center; 
 align-items: center;  
 '>
-      <img src='logo.png' width='40' alt='Droom Dazlean Software Solutions Logo'/> &nbsp;&nbsp;&nbsp; CITY OF HARARE &nbsp;&nbsp; <span style='font-size:0.7em'>HUMAN CAPITAL DEPARTMENT</span> &nbsp;&nbsp; <span style='font-size:0.5em'> TALENT DEVELOPMENT DIVISION</span>
+      <img src='logo.png' width='40' alt='Droom Dazlean Software Solutions Logo'/>
       </h1>
       <button id="toggleAsideBtn" aria-label="Toggle sidebar menu" aria-expanded="false" aria-controls="sidebar"
         title="Toggle Menu">Menu</button>
     </header>
 
     <aside id="sidebar" role="complementary" aria-label="Navigation sidebar" tabindex="-1">
-      <img src="coh.png" alt="City of Harare Talent Development Division Logo"
+   
+      <nav class="aside-nav" role="navigation" aria-label="Page navigation options">
+   <img src="coh.png" alt="City of Harare Talent Development Division Logo"
         class="org-logo" loading="lazy" />
 
-      <nav class="aside-nav" role="navigation" aria-label="Page navigation options">
         <button id="btnReasons" aria-selected="false" aria-controls="mainContent" tabindex="-1" type="button">
           Possible Reasons
         </button>
@@ -458,14 +461,14 @@ align-items: center;
 
     <article id="mainContent" class="content" role="main" tabindex="0" aria-live="polite" aria-atomic="true">
       <div id="errorIcon" aria-hidden="true" title="Page Load Error Icon">⚠️</div>
-      <h2>CITY OF HARARE @ 2025</h2>
+      <h2 style='text-align:center'>CITY OF HARARE <br> 2025</h2>
       <p>
         We’re sorry, but the page you requested failed to load. Please select an option from the menu to learn more
         about the issue and how to resolve it.
       </p>
     </article>
 
-    <button id="floatingHelpBtn" aria-label="Open help page" title="Help">Need Help?</button>
+    <button id="floatingHelpBtn" aria-label="Open help page" title="Help">Exit</button>
   </div>
 
   <script>
